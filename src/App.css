@@ -1,33 +1,218 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #F7F7F8;
   min-height: 100vh;
+}
+
+p {
+  font-size: 14px;
+  color: #333333;
+}
+hr{
+  border: 0.5px solid rgba(128, 128, 128, 0.3);
+  width: 100%;
+}
+
+.top-bar {
+  height: 25px;
+  background-color: #007bff;
+  color: #FFFFFF;
+}
+.top-bar p {
+  margin-bottom: 0;
+  padding-top: 1px;
+  color: #FFFFFF;
+}
+.nodes-infos {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.update:hover{
+  cursor: pointer;
+}
+.main-display {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 0 0 1px rgba(63,63,68,.1);
+  background-color: white;
+}
+
+.footer {
+  height: 50px;
+}
+
+
+
+/* NODE CARD */
+.node-card {
+  width: 350px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 0 0 1px rgba(63,63,68,.1);
+  background-color: white;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+.node-card h6 {
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.node-card p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+.node-id {
+  font-weight: bold;
+  font-size: 28px;
+  margin-left: 8px;
+}
+.node-card-first-line {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.status-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.status-section p {
+  font-size: 9px;
+}
+.status-box-green {
+  width: 70px;
+  height: 25px;
+  background-color: green;
+  color: #FFFFFF;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 5px;
+  margin-top: 4px;
+}
+.status-box-red {
+  width: 70px;
+  height: 25px;
+  background-color: red;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-top: 4px;
+}
+.status-box-red span,
+.status-box-green span{
+  font-weight: bolder;
+
 }
 
-.App-link {
-  color: #61dafb;
+/* LAST TRANSACTIONS */
+.submit-last-transactions {
+  display: flex;
+  flex-direction: row;
+}
+.submit-last-transactions label {
+  width: 160px;
+  margin-right: 15px;
+  padding-top: 5px;
+}
+.submit-last-transactions .btn-primary {
+  height: 38px;
+  margin-left: 15px;
+}
+.btn-outline-secondary {
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.select-node{
+  margin-top: 15px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+.tx-confirmed {
+  width: 100px;
+  height: 24px;
+  background-color: green;
+  margin: 0 auto;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+.tx-not-confirmed {
+  width: 140px;
+  height: 24px;
+  background-color: red;
+  margin: 0 auto;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+.tx-not-confirmed p,
+.tx-confirmed p {
+  color: #FFFFFF;
+  font-weight: bold;
+  padding-top: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ACCOUNT DATA */
+.account-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 700px;
+  margin: 0 auto;
+}
+.wallet-icon {
+  margin-right: 10px;
+}
+
+/* ISSUE TRANSACTION */
+.input-message {
+  margin-bottom: 15px;
+}
+.seed-finish {
+  margin-right: 70px;
+}
+.select-node-issue-transaction {
+  margin-top: 15px;
+  margin-left: 55px;
+  margin-bottom: 20px;
+}
+.btn-issue-transaction {
+  margin-top: 15px;
+  margin-left: 70px;
+  margin-bottom: 20px;
+}
+.terminal-green {
+  width: 100%;
+  background-color: #333333;
+  color: lightgreen;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  overflow-x: scroll;
+}
+.terminal-red {
+  background-color: #333333;
+  color: lightred;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
 }
